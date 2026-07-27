@@ -43,7 +43,7 @@ def is_prime(n):
     # Check for divisors from 2 up to sqrt(n)
     for i in range(2, int(n ** 0.5) + 1):
         if n % i == 0:
-            return False  # found a divisor, so it's not prime
+            return False  # found a divisor, so it's not primey
 
     return True  # no divisors found, so it is prime
 
