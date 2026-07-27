@@ -35,3 +35,27 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+def is_prime(n):
+    # Numbers less than 2 are never prime
+    if n < 2:
+        return False
+
+    # Check for divisors from 2 up to sqrt(n)
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False  # found a divisor, so it's not prime
+
+    return True  # no divisors found, so it is prime
+
+
+def main():
+    number = int(input("Enter a number: "))
+
+    if is_prime(number):
+        print(f"{number} is a prime number.")
+    else:
+        print(f"{number} is NOT a prime number.")
+
+
+if __name__ == "__main__":
+    main()
